@@ -42,4 +42,4 @@ If `--ports` is used, neither `--min-port` nor `--max-port` will have an effect.
 
 ## Performance
 
-The [`multiport.scanner.Scanner`](./multiport/scanner.py) class implements port scanning based on the [socket](https://docs.python.org/3/library/socket.html) library. This is written synchronously and therefore blocks on each port, until the scan is done. To improve this, the scanning could be implement using e.g. asyncio or threads to speed things up.
+The [`multiport.scanner.Scanner`](./multiport/scanner.py) class implements port scanning based on the [socket](https://docs.python.org/3/library/socket.html) library. This is written synchronously and therefore blocks on each port, until the scan is done. To improve this, the scanning could be implemented using e.g. asyncio or threads to speed things up.
