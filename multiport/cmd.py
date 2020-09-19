@@ -41,7 +41,7 @@ def multiport(
     If --ports is set, all given ports will be scanned.
 
     If --min-port or --max-port are set, all ports in the interval will be
-    scanned (--min-port defaults to 0 and --max-port defaults to 65536 if only
+    scanned (--min-port defaults to 1 and --max-port defaults to 65536 if only
     one is set).
 
     \b
@@ -65,7 +65,7 @@ def multiport(
         for port in tqdm.tqdm(ports):
             scanner.scan(port=port)
     else:
-        min_port = min_port or 0
+        min_port = min_port or 1
         max_port = max_port or 65536
 
         for port in tqdm.trange(min_port, max_port):
